@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daffa Uria Fernanda | Cybersecurity Enthusiast & S1 Teknik Informatika UNESA</title>
+  <meta name="description" content="Website portofolio dan personal branding Daffa Uria Fernanda - Mahasiswa Baru S1 Teknik Informatika di Universitas Negeri Surabaya (UNESA) dengan fokus pada Cybersecurity dan Network Defense.">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              900: '#064e3b',
+              dark: '#090d16',
+              card: '#0f172a',
+              accent: '#06b6d4',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+     <script src="https://unpkg.com/lucide@1.55.0/dist/umd/lucide.min.js"></script>
+  
+  <!-- Font Awesome Icons for Brands -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen transition-colors duration-300 antialiased selection:bg-emerald-500 selection:text-slate-950 bg-grid-pattern">
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo / Personal Brand -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center text-slate-950 font-bold font-mono text-lg shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            DUF
+          </div>
+          <div>
+            <div class="font-bold tracking-tight text-white dark:text-white flex items-center gap-2">
+              <span>Daffa Uria F.</span>
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            </div>
+            <p class="text-xs text-slate-400 font-mono">Cybersec &middot; UNESA</p>
+          </div>
+        </a>
+
+        <!-- Desktop Menu Links -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#about" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 hover:bg-slate-800/40 rounded-lg transition-colors">Tentang</a>
+          <a href="#education" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 hover:bg-slate-800/40 rounded-lg transition-colors">Pendidikan</a>
+          <a href="#skills" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 hover:bg-slate-800/40 rounded-lg transition-colors">Keahlian</a>
+          <a href="#projects" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 hover:bg-slate-800/40 rounded-lg transition-colors">Proyek</a>
+          <a href="#terminal" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 hover:bg-slate-800/40 rounded-lg transition-colors font-mono">&gt; Terminal</a>
+          <a href="#contact" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 hover:bg-slate-800/40 rounded-lg transition-colors">Kontak</a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3">
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" aria-label="Ganti Tema" class="p-2.5 rounded-xl border border-slate-700/60 bg-slate-800/50 hover:bg-slate-800 text-slate-300 hover:text-emerald-400 transition-all">
+            <span id="theme-icon-light"><i data-lucide="sun" class="w-4 h-4"></i></span>
+            <span id="theme-icon-dark" class="hidden"><i data-lucide="moon" class="w-4 h-4"></i></span>
+          </button>
+
+          <!-- Contact / CV Button -->
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 rounded-xl transition-all shadow-md shadow-emerald-400/20 hover:shadow-emerald-400/40">
+            <span>Hubungi Saya</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-xl text-slate-300 hover:bg-slate-800 border border-slate-700/60">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-950/95 px-4 pt-2 pb-6 space-y-2">
+      <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-emerald-400 rounded-lg hover:bg-slate-900">Tentang</a>
+      <a href="#education" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-emerald-400 rounded-lg hover:bg-slate-900">Pendidikan Terakhir</a>
+      <a href="#skills" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-emerald-400 rounded-lg hover:bg-slate-900">Bidang & Keahlian</a>
+      <a href="#projects" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-emerald-400 rounded-lg hover:bg-slate-900">Proyek</a>
+      <a href="#terminal" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-emerald-400 rounded-lg hover:bg-slate-900 font-mono">&gt; Terminal Interaktif</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium text-slate-300 hover:text-emerald-400 rounded-lg hover:bg-slate-900">Hubungi Daffa</a>
+      <div class="pt-2">
+        <a href="#contact" class="w-full inline-flex justify-center items-center gap-2 px-4 py-2.5 text-sm font-semibold text-slate-950 bg-emerald-400 rounded-xl">
+          <span>Hubungi Saya</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20 sm:pt-28">
+
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 overflow-hidden">
+      <!-- Glow ambient background -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+      <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text & Branding -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-300 text-xs sm:text-sm font-mono backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Open to Learning, CTF & Tech Collaborations</span>
+          </div>
+
+          <!-- Main Title -->
+          <div class="space-y-2">
+            <h2 class="text-sm sm:text-base font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+              Halo Semuanya, Saya
+            </h2>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Daffa Uria Fernanda
+            </h1>
+          </div>
+
+          <!-- Dynamic Typing Text -->
+          <div class="h-10 sm:h-12 flex items-center justify-center lg:justify-start text-lg sm:text-2xl font-mono text-slate-300">
+            <span class="text-emerald-400 mr-2">&gt;</span>
+            <span id="typing-text" class="font-semibold text-emerald-400"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <!-- Brief Narrative Description -->
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Mahasiswa Baru S1 Teknik Informatika di <span class="text-emerald-400 font-medium">Universitas Negeri Surabaya (UNESA)</span> yang antusias dalam dunia <span class="text-white font-medium">Cybersecurity</span>, analisis celah keamanan, dan jaringan komputer. Berkomitmen mengasah pemahaman pertahanan digital dan eksplorasi teknologi secara etis.
+          </p>
+
+          <!-- Action CTA Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm sm:text-base transition-all shadow-lg shadow-emerald-500/25 flex items-center gap-2 group">
+              <span>Eksplorasi Proyek</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold text-sm sm:text-base transition-all flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+
+          <!-- Social Media Links (Ready for pasting!) -->
+          <div class="pt-4 flex items-center justify-center lg:justify-start gap-3">
+            <span class="text-xs font-mono text-slate-400 mr-2">Temukan Saya:</span>
+
+            <!-- LINKEDIN: link LinkedIn Daffa -->
+            <a href="https://www.linkedin.com/in/daffa-uria-fernanda-14437b42a/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 flex items-center justify-center text-slate-300 hover:text-emerald-400 transition-all shadow-sm">
+              <i class="fa-brands fa-linkedin-in text-base"></i>
+            </a>
+
+            <!-- GITHUB: link GitHub Daffa -->
+            <a href="https://github.com/dafauria-dev" target="_blank" rel="noopener noreferrer" title="GitHub" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 flex items-center justify-center text-slate-300 hover:text-emerald-400 transition-all shadow-sm">
+              <i class="fa-brands fa-github text-base"></i>
+            </a>
+
+            <!-- INSTAGRAM: link Instagram Daffa -->
+            <a href="https://www.instagram.com/dapantutt?xtok=dWRib3M5c3Zlbjg5" target="_blank" rel="noopener noreferrer" title="Instagram " class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 flex items-center justify-center text-slate-300 hover:text-emerald-400 transition-all shadow-sm">
+              <i class="fa-brands fa-instagram text-base"></i>
+            </a>
+
+            <!-- WHATSAPP: link wa.me/62... -->
+            <a href="https://wa.me/6281333522693" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 flex items-center justify-center text-slate-300 hover:text-emerald-400 transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+            </a>
+
+            <!-- EMAIL: mailto:emailkamu@domain.com -->
+            <a href="mailto:dafauria@gmail.com" title="Email Daffa" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 flex items-center justify-center text-slate-300 hover:text-emerald-400 transition-all shadow-sm">
+              <i class="fa-solid fa-envelope text-base"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Cyber Card Visual -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Glowing Outline Frame -->
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-30 blur-lg"></div>
+
+            <div class="relative glass-card rounded-3xl p-6 sm:p-8 space-y-6 border border-slate-700/60 shadow-2xl">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div class="flex items-center gap-2 font-mono text-xs text-slate-400">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span class="text-emerald-400 font-semibold">SECURITY IDENTITY</span>
+                </div>
+                <span class="text-xs font-mono text-slate-500">ID: DUF-2026</span>
+              </div>
+
+              <!-- Avatar / Badge Centerpiece -->
+              <div class="flex flex-col items-center text-center space-y-3 py-2">
+                <div class="relative w-28 h-28 rounded-2xl p-1 bg-gradient-to-b from-emerald-400 to-slate-800 shadow-xl">
+                  <div class="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center overflow-hidden border border-slate-700/80">
+                    <!-- Icon placeholder avatar (Bisa diganti dengan tag <img> foto sendiri) -->
+                    <img src="img/foto.jpeg"  class="w-full h-full object-cover"> 
+                  </div>
+                  <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-slate-950 p-1.5 rounded-lg shadow-md">
+                    <i data-lucide="terminal" class="w-3.5 h-3.5 font-bold"></i>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 class="font-bold text-lg text-white">Daffa Uria Fernanda</h3>
+                  <p class="text-xs text-slate-400 font-mono">Mahasiswa S1 Teknik Informatika</p>
+                </div>
+              </div>
+
+              <!-- Metadata List -->
+              <div class="space-y-2.5 font-mono text-xs">
+                <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80">
+                  <span class="text-slate-400 flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-emerald-400"></i>
+                    Universitas
+                  </span>
+                  <span class="text-emerald-400 font-semibold">UNIVERSITAS NEGERI SURABAYA</span>
+                </div>
+
+                <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80">
+                  <span class="text-slate-400 flex items-center gap-2">
+                    <i data-lucide="target" class="w-4 h-4 text-cyan-400"></i>
+                    Spesialisasi
+                  </span>
+                  <span class="text-cyan-300 font-semibold">Cybersecurity</span>
+                </div>
+
+                <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80">
+                  <span class="text-slate-400 flex items-center gap-2">
+                    <i data-lucide="activity" class="w-4 h-4 text-emerald-400"></i>
+                    Status
+                  </span>
+                  <span class="text-emerald-300 font-semibold flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active Freshman
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card Footer Note -->
+              <p class="text-center text-xs text-slate-500 italic pt-1">
+                "Securing systems by understanding vulnerabilities."
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         3. INTERACTIVE TERMINAL WIDGET SECTION
+         ========================================================================= -->
+    <section id="terminal" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="terminal-window">
+        <!-- Terminal Header -->
+        <div class="terminal-header justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+            <span class="text-xs font-mono text-slate-400 ml-2">bash: daffa@unesa-kali-linux ~ (Interactive Shell)</span>
+          </div>
+          <div class="text-[11px] font-mono text-emerald-400/80 hidden sm:block">
+            [STATUS: CONNECTED]
+          </div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="p-4 sm:p-6 space-y-4">
+          <!-- Initial Welcome Text -->
+          <div class="text-xs font-mono text-slate-300 leading-relaxed border-b border-slate-800 pb-3">
+            <p class="text-emerald-400 font-bold">Selamat datang di Terminal Interaktif Profil Daffa Uria Fernanda!</p>
+            <p class="text-slate-400 mt-1">Ketik perintah di bawah atau klik tombol shortcut cepat untuk mengetahui informasi lebih lanjut.</p>
+          </div>
+
+          <!-- History output container -->
+          <div id="terminal-history" class="space-y-3 max-h-60 overflow-y-auto pr-2">
+            <!-- Sample first entry -->
+            <div>
+              <div class="flex items-center gap-2 text-slate-400 text-xs">
+                <span class="text-emerald-400 font-mono font-semibold">daffa@unesa:~$</span>
+                <span class="text-slate-200 font-mono">whoami</span>
+              </div>
+              <div class="text-xs text-slate-300 font-mono pl-4 mt-1 border-l-2 border-emerald-500/40 leading-relaxed">
+                Daffa Uria Fernanda &mdash; Mahasiswa S1 Teknik Informatika UNESA & Cybersecurity Enthusiast.
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Command Shortcut Buttons -->
+          <div class="pt-2 border-t border-slate-800/80 flex flex-wrap items-center gap-2 text-xs">
+            <span class="text-slate-500 font-mono">Shortcut:</span>
+            <button class="terminal-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-emerald-400 font-mono transition-colors" data-cmd="whoami">whoami</button>
+            <button class="terminal-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-emerald-400 font-mono transition-colors" data-cmd="education">education</button>
+            <button class="terminal-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-emerald-400 font-mono transition-colors" data-cmd="skills">skills</button>
+            <button class="terminal-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-emerald-400 font-mono transition-colors" data-cmd="interests">interests</button>
+            <button class="terminal-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-emerald-400 font-mono transition-colors" data-cmd="contact">contact</button>
+            <button class="terminal-cmd-btn px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-rose-400 font-mono transition-colors" data-cmd="clear">clear</button>
+          </div>
+
+          <!-- Terminal Input Line -->
+          <form id="terminal-form" class="flex items-center gap-2 pt-2 border-t border-slate-800/60">
+            <span class="text-emerald-400 font-mono text-xs font-semibold">daffa@unesa:~$</span>
+            <input 
+              type="text" 
+              id="terminal-input" 
+              placeholder="Ketik 'help' lalu tekan Enter..." 
+              autocomplete="off"
+              class="flex-1 bg-transparent border-none outline-none text-xs font-mono text-emerald-300 placeholder:text-slate-600 focus:ring-0"
+            >
+            <button type="submit" class="px-3 py-1 rounded text-xs bg-emerald-500/20 text-emerald-300 font-mono hover:bg-emerald-500 hover:text-slate-950 transition-colors">
+              Execute
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         4. TENTANG DIRI SENDIRI (ABOUT ME)
+         ========================================================================= -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <h2 class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+          Tentang Diri Sendiri
+        </h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Mengenal Lebih Dekat Perjalanan & Dedikasi
+        </h3>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Dedikasi untuk memahami bagaimana teknologi bekerja di balik layar, menemukan potensi risiko sistem, dan merancang pertahanan yang kokoh.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Story / Narrative -->
+        <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
+              <i data-lucide="user" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">Profil & Minat</h4>
+          </div>
+
+          <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p>
+              Halo! Nama saya <strong class="text-white">Daffa Uria Fernanda</strong>, biasa dipanggil <strong class="text-emerald-400">Daffa</strong>. Saat ini saya menempuh jenjang pendidikan tinggi sebagai mahasiswa baru di program studi <strong class="text-white">S1 Teknik Informatika, Universitas Negeri Surabaya (UNESA)</strong>.
+            </p>
+            <p>
+              Ketertarikan saya berpusat pada bidang <strong class="text-emerald-400">Cybersecurity</strong>. Bagi saya, keamanan informasi bukan sekadar tentang menemukan celah, melainkan tentang memahami arsitektur sistem secara menyeluruh, mengantisipasi ancaman, serta melindungi data dan infrastruktur digital pengguna.
+            </p>
+            <p>
+              Saya aktif mempelajari konsep dasar jaringan komputer (networking), administrasi Linux, pengujian penetrasi (penetration testing), dan tantangan CTF (Capture The Flag). Saya percaya bahwa konsistensi belajar dan penerapan etika yang bertanggung jawab adalah pondasi utama dalam dunia keamanan siber.
+            </p>
+          </div>
+
+          <!-- Core Values Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800/80">
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-center space-y-1">
+              <i data-lucide="shield" class="w-5 h-5 text-emerald-400 mx-auto"></i>
+              <p class="text-xs font-semibold text-slate-200">Ethical Hacking</p>
+            </div>
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-center space-y-1">
+              <i data-lucide="cpu" class="w-5 h-5 text-cyan-400 mx-auto"></i>
+              <p class="text-xs font-semibold text-slate-200">System Analysis</p>
+            </div>
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-center space-y-1">
+              <i data-lucide="book-open" class="w-5 h-5 text-emerald-400 mx-auto"></i>
+              <p class="text-xs font-semibold text-slate-200">Lifelong Learner</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Fast Highlights & Metrics -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- Card 1: Status Akademik -->
+          <div class="glass-card p-6 rounded-3xl space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Status Akademik</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-medium">Aktif</span>
+            </div>
+            <h5 class="text-lg font-bold text-white">Mahasiswa S1 Teknik Informatika</h5>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Fakultas Teknik, Universitas Negeri Surabaya (UNESA). Mengembangkan pondasi ilmu komputer, komputasi terdistribusi, dan keamanan data.
+            </p>
+          </div>
+
+          <!-- Card 2: Fokus Praktik -->
+          <div class="glass-card p-6 rounded-3xl space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Aktivitas Praktik</span>
+              <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-mono font-medium">Hands-on</span>
+            </div>
+            <h5 class="text-lg font-bold text-white">Lab & Eksplorasi Keamanan</h5>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Mengerjakan lab virtual di TryHackMe, PortSwigger Web Security, latihan konfigurasi jaringan Wireshark, dan eksplorasi Linux environment.
+            </p>
+          </div>
+
+          <!-- Card 3: Goals -->
+          <div class="glass-card p-6 rounded-3xl space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Target & Visi</span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-mono font-medium">Goal</span>
+            </div>
+            <h5 class="text-lg font-bold text-white">Certified Security Professional</h5>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Mempersiapkan sertifikasi industri bidang keamanan siber (seperti CompTIA Security+, CEH, atau eJPT) dan berkontribusi dalam tim CTF serta riset pertahanan siber.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         5. PENDIDIKAN TERAKHIR (EDUCATION)
+         ========================================================================= -->
+    <section id="education" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-slate-800/60">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <h2 class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+          Riwayat Pendidikan
+        </h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Latar Belakang Pendidikan & Akademik
+        </h3>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Pondasi akademik formal yang membentuk pola pikir analitis, logis, dan terstruktur.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto relative">
+        
+        <!-- Vertical Timeline Line -->
+        <div class="timeline-line"></div>
+
+        <div class="space-y-12 pl-10 sm:pl-12">
+
+          <!-- Item 1: UNESA (Pendidikan Terakhir / Sekarang) -->
+          <div class="relative group">
+            <!-- Timeline Pin Dot -->
+            <div class="absolute -left-10 sm:-left-12 top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-emerald-400 flex items-center justify-center shadow-lg shadow-emerald-400/30">
+              <div class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></div>
+            </div>
+
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-emerald-500/30 space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800">
+                <div class="space-y-1">
+                  <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-semibold">
+                    Pendidikan Terakhir & Sedang Ditempuh
+                  </span>
+                  <h4 class="text-2xl font-bold text-white">Universitas Negeri Surabaya (UNESA)</h4>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-mono text-emerald-400 font-semibold px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">
+                    2026 &mdash; Sekarang
+                  </span>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <div class="flex items-center gap-2 text-sm font-semibold text-slate-200">
+                  <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i>
+                  <span>Program Studi: S1 Teknik Informatika</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Sebagai mahasiswa baru (freshman), fokus studi saya mencakup pemahaman mendasar seputar algoritma dan pemrograman, arsitektur sistem komputer, struktur data, matematika diskrit, dan jaringan dasar. Selain kurikulum akademik, saya aktif mendalami topik-topik keamanan siber (cybersecurity) secara otodidak dan melalui komunitas.
+                </p>
+              </div>
+
+              <!-- Relevant Subjects / Competencies -->
+              <div class="pt-2">
+                <p class="text-xs font-mono text-slate-400 mb-2">Fokus Pembelajaran & Minat Studi:</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">Algoritma & Pemrograman</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">Jaringan Komputer (Networking)</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">Sistem Operasi Linux</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-emerald-400 font-mono">Cybersecurity & CTF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                   <!-- Item 2: SMK -->
+          <div class="relative group">
+            <!-- Timeline Pin Dot -->
+            <div class="absolute -left-10 sm:-left-12 top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-600 flex items-center justify-center">
+              <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+            </div>
+
+            <div class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
+              <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-800">
+                <div class="space-y-1">
+                  <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-mono">
+                    Pendidikan Menengah Kejuruan
+                  </span>
+                  <h4 class="text-xl font-bold text-white">
+                    SMK Negeri 1 Pungging
+                  </h4>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-mono text-slate-400 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800">
+                    Lulus 2026
+                  </span>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <div class="flex items-center gap-2 text-sm font-semibold text-slate-300">
+                  <i data-lucide="book" class="w-4 h-4 text-slate-400"></i>
+                  <span>Jurusan: Desain Komunikasi Visual (DKV)</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Mendalami dasar desain visual, tata letak, dan kreativitas di jurusan DKV. Latar belakang ini membantu saya merancang tampilan yang rapi dan nyaman dipakai, termasuk website portofolio ini, sebelum melanjutkan ke Teknik Informatika di UNESA untuk mendalami keamanan siber.
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">Desain Visual</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">UI / Tata Letak</span>
+                </div>
+              </div>
+
+              <!-- Highlight: dari desain ke keamanan -->
+              <div class="p-3 rounded-xl bg-emerald-500/5 border border-emerald-500/20 text-xs text-slate-300 flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span>Perpaduan desain dan keamanan: saya ingin membangun sistem yang tidak hanya aman, tetapi juga nyaman dipakai.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         6. BIDANG YANG DITEKUNI & KEAHLIAN (SKILLS)
+         ========================================================================= -->
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-slate-800/60">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <h2 class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+          Bidang yang Ditekuni & Skills
+        </h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Keahlian Teknis & Domain Cybersecurity
+        </h3>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Teknologi, tools pengujian keamanan, bahasa pemrograman, dan platform lab yang saya gunakan dalam pembelajaran.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Domain 1: Cybersecurity Fundamentals -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white">Cybersecurity & Defense</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Konsep keamanan siber, analisis risiko, dan metodologi pengujian keamanan sistem.
+          </p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Network Security & Traffic Analysis</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> OWASP Top 10 Web Vulnerabilities</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Port Scanning & Reconnaissance</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Basic Cryptography & Hashing</li>
+          </ul>
+        </div>
+
+        <!-- Domain 2: Tools & Operating Systems -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="terminal" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white">Security Tools & OS</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Perangkat lunak analisis dan distribusi sistem operasi yang diandalkan dalam pengujian siber.
+          </p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Kali Linux / Ubuntu Environment</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Nmap (Network Mapping)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Wireshark (Packet Inspection)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Burp Suite (Web Proxy & Intercept)</li>
+          </ul>
+        </div>
+
+        <!-- Domain 3: Programming & Scripting -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="code" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white">Programming & Logic</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Fondasi bahasa pemrograman untuk otomasi tugas keamanan dan pemahaman logika perangkat lunak.
+          </p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Python (Security & Automation)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Bash / Shell Scripting</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> C / C++ (Fundamental Algoritma)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> HTML, CSS, JavaScript, & SQL</li>
+          </ul>
+        </div>
+
+        <!-- Domain 4: Practice Labs & CTF -->
+        <div class="glass-card p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="flag" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white">Labs & Hands-on Arena</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Platform simulasi dan arena kompetisi untuk menguji pemahaman keamanan secara nyata dan legal.
+          </p>
+          <ul class="space-y-2 text-xs font-mono text-slate-300 pt-2 border-t border-slate-800">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> TryHackMe Learning Rooms</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> PortSwigger Web Security Academy</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Capture The Flag (CTF) Challenges</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Local VM Labs (DVWA / Metasploitable)</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         7. PROYEK & WRITEUPS (PORTFOLIO SHOWCASE)
+         ========================================================================= -->
+    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-slate-800/60">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="space-y-3 max-w-2xl">
+          <h2 class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+            Portofolio & Karya
+          </h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Proyek
+          </h3>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+         Salah satu proyek pertama saya, dan akan terus bertambah seiring perjalanan belajar di bidang keamanan siber.
+          </p>
+          </p>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 gap-8 max-w-xl mx-auto">
+        
+
+        <!-- Card : Personal Branding Website -->
+        <div class="project-card glass-card rounded-3xl overflow-hidden flex flex-col border border-slate-800 transition-all duration-300" data-category="web scripts">
+          <div class="p-6 pb-4 bg-gradient-to-br from-emerald-950/40 to-slate-900 border-b border-slate-800 flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400 font-semibold px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/20">
+              Personal Branding &middot; Frontend
+            </span>
+            <i data-lucide="globe" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <h4 class="text-lg font-bold text-white hover:text-emerald-400 transition-colors">
+                Personal Cybersecurity Portfolio Website
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                Website portofolio modern dengan tema cyber aesthetic, fitur terminal interaktif, dark/light switcher, responsif di semua perangkat, dan dioptimalkan untuk personal branding.
+              </p>
+            </div>
+            <div class="space-y-3 pt-2">
+              <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-slate-300">
+                <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">HTML5</span>
+                <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Vanilla JS</span>
+              </div>
+              <div class="flex items-center gap-3 pt-2 border-t border-slate-800 text-xs">
+                <a href="#hero" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1.5">
+                  <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                  <span>Live Preview (Saat ini)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         8. KONTAK & FOOTER (CONTACT SECTION)
+         ========================================================================= -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-slate-800/60">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <h2 class="text-xs sm:text-sm font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+          Hubungi Saya
+        </h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Mari Terhubung & Berkolaborasi
+        </h3>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Tertarik untuk berdiskusi seputar keamanan siber, proyek kolaborasi, atau sekadar bertukar wawasan teknologi? Jangan ragu untuk mengirim pesan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto">
+        
+        <!-- Left Column: Contact Methods & Socials -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+            <h4 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="send" class="w-5 h-5 text-emerald-400"></i>
+              <span>Informasi Kontak</span>
+            </h4>
+
+            <div class="space-y-4 text-sm">
+              <!-- Lokasi -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 shrink-0">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-mono text-slate-400">Domisili / Kampus</p>
+                  <p class="font-semibold text-white">Mojokerto, Jawa Timur, Indonesia</p>
+                  <p class="text-xs text-slate-400">Universitas Negeri Surabaya (UNESA)</p>
+                </div>
+              </div>
+
+              <!-- Email (Placeholder) -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-cyan-400 shrink-0">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-mono text-slate-400">Email Utama</p>
+                  <!-- GANTI: Alamat email kamu di bawah -->
+                  <a href="mailto:dafauria@gmail.com" class="font-semibold text-emerald-400 hover:underline">
+                    dafauria@gmail.com
+                  </a>
+                  <p class="text-[11px] text-slate-500">(email pribadi)</p>
+                </div>
+              </div>
+
+              <!-- WhatsApp Quick Link -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400 shrink-0">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-mono text-slate-400">WhatsApp</p>
+                  <!--  Link nomor WhatsApp kamu  -->
+                  <a href="https://wa.me/6281333522693" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-200 hover:text-emerald-400 flex items-center gap-1">
+                    <span>Chat via WhatsApp</span>
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  </a>
+                  <p class="text-[11px] text-slate-500"></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Grid -->
+            <div class="pt-4 border-t border-slate-800">
+              <p class="text-xs font-mono text-slate-400 mb-3">Tautan Media Sosial:</p>
+              <div class="flex flex-wrap gap-2.5">
+                
+                <!-- LinkedIn Placeholder -->
+                <a href="https://www.linkedin.com/in/daffa-uria-fernanda-14437b42a/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 text-xs font-mono text-slate-300 hover:text-emerald-400 flex items-center gap-2 transition-all">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+
+                <!-- GitHub Placeholder -->
+                <a href="https://github.com/dafauria-dev" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 text-xs font-mono text-slate-300 hover:text-emerald-400 flex items-center gap-2 transition-all">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+
+                <!-- Instagram Placeholder -->
+                <a href="https://www.instagram.com/dapantutt?xtok=dWRib3M5c3Zlbjg5" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800 text-xs font-mono text-slate-300 hover:text-emerald-400 flex items-center gap-2 transition-all">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+               <!-- Right Column: Interactive Message Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+            <h4 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
+              <span>Kirimkan Pesan Langsung</span>
+            </h4>
+
+            <!-- Success Alert Notification -->
+            <div id="form-success-alert" class="hidden p-4 rounded-2xl bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 text-xs sm:text-sm font-mono flex items-center gap-3">
+              <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+              <span>Terima kasih! Pesan Anda sudah terkirim. Saya akan membalas secepatnya.</span>
+            </div>
+
+            <!-- Error Alert Notification -->
+            <div id="form-error-alert" class="hidden p-4 rounded-2xl bg-rose-950/60 border border-rose-500/50 text-rose-300 text-xs sm:text-sm font-mono">
+              Pesan gagal terkirim. Silakan coba lagi, atau hubungi saya lewat WhatsApp / email.
+            </div>
+
+            <form id="contact-form" class="space-y-4">
+              <!-- Pengaturan FormSubmit (tersembunyi) -->
+              <input type="hidden" name="_subject" value="Pesan baru dari website portofolio">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="space-y-1.5">
+                  <label for="contact-name" class="block text-xs font-mono text-slate-400">Nama Lengkap</label>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name"
+                    required 
+                    placeholder="Contoh: Budi Santoso" 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
+                  >
+                </div>
+                <div class="space-y-1.5">
+                  <label for="contact-email" class="block text-xs font-mono text-slate-400">Alamat Email</label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email"
+                    required 
+                    placeholder="budi@example.com" 
+                    class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
+                  >
+                </div>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="contact-subject" class="block text-xs font-mono text-slate-400">Subjek / Topik</label>
+                <input 
+                  type="text" 
+                  id="contact-subject" 
+                  name="subject"
+                  placeholder="Misal: Diskusi Proyek Keamanan / Tanya-tanya" 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
+                >
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="contact-message" class="block text-xs font-mono text-slate-400">Pesan Anda</label>
+                <textarea 
+                  id="contact-message" 
+                  name="message"
+                  rows="4" 
+                  required 
+                  placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." 
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button 
+                id="contact-submit-btn"
+                type="submit" 
+                class="w-full py-3.5 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm sm:text-base transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span id="contact-submit-label">Kirim Pesan Sekarang</span>
+              </button>
+            </form>
+
+            <!-- Pengiriman form ke email via FormSubmit.
+                 Script ini sengaja ditaruh tepat setelah form supaya berjalan
+                 SEBELUM handler lama di js/main.js, lalu menghentikannya. -->
+            <script>
+              (function () {
+                var form = document.getElementById('contact-form');
+                var okBox = document.getElementById('form-success-alert');
+                var errBox = document.getElementById('form-error-alert');
+                var btn = document.getElementById('contact-submit-btn');
+                var label = document.getElementById('contact-submit-label');
+                if (!form) return;
+
+                form.addEventListener('submit', function (e) {
+                  e.preventDefault();
+                  e.stopImmediatePropagation(); // matikan handler "simulasi" lama di main.js
+
+                  okBox.classList.add('hidden');
+                  errBox.classList.add('hidden');
+                  btn.disabled = true;
+                  label.textContent = 'Mengirim...';
+
+                  fetch('https://formsubmit.co/ajax/dafauria@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form)
+                  })
+                    .then(function (res) {
+                      if (!res.ok) throw new Error('HTTP ' + res.status);
+                      return res.json();
+                    })
+                    .then(function () {
+                      form.reset();
+                      okBox.classList.remove('hidden');
+                    })
+                    .catch(function () {
+                      errBox.classList.remove('hidden');
+                    })
+                    .finally(function () {
+                      btn.disabled = false;
+                      label.textContent = 'Kirim Pesan Sekarang';
+                    });
+                });
+              })();
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/90 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        
+        <!-- Left Brand -->
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-slate-950 font-bold font-mono text-sm">
+            DUF
+          </div>
+          <div>
+            <p class="font-bold text-sm text-white">Daffa Uria Fernanda</p>
+            <p class="text-xs text-slate-400 font-mono">S1 Teknik Informatika &middot; UNESA</p>
+          </div>
+        </div>
+
+        <!-- Center Note -->
+        <p class="text-xs text-slate-500 text-center font-mono">
+          &copy; 2026 &mdash; Sekarang Daffa Uria Fernanda. Built with Passion for Cybersecurity.
+        </p>
+
+        <!-- Back to Top Button -->
+        <a href="#hero" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 transition-colors">
+          <span>Kembali ke Atas</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button 
+    id="scroll-top-btn" 
+    aria-label="Scroll ke atas"
+    class="fixed bottom-6 right-6 z-40 p-3 rounded-2xl bg-emerald-500 text-slate-950 shadow-xl shadow-emerald-500/30 opacity-0 pointer-events-none hover:bg-emerald-400 hover:scale-105 transition-all duration-300"
+  >
+    <i data-lucide="chevron-up" class="w-5 h-5 font-bold"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
